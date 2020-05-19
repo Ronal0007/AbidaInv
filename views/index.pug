@@ -1,0 +1,278 @@
+doctype html
+html(lang='en')
+    head
+        meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        meta(name='description' content='')
+        title Abida Investiment Co. LTD
+        link(rel='canonical' href='https://getbootstrap.com/docs/4.3/examples/jumbotron/')
+        link(rel='shortcut icon' href='./images/wisjane-logo.ico')
+        // Bootstrap core CSS
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+        link(href='./bootstrap/css/bootstrap.min.css' rel='stylesheet')
+        script(data-ad-client='ca-pub-4697597730958440' async='' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+        style.
+            .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            user-select: none;
+            }
+            @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+            }
+            .footer-links {
+            flex: space-between;
+            }
+        // Custom styles for this template
+    body(oncontextmenu='return false')
+        .container
+            nav#myHeader.navbar.navbar-expand-lg.navbar-light.bg-warning
+                a.navbar-brand(href='#' style='font-family:verdana;font-size: 21px; color: rgb(255, 255, 255)')
+                    | ABIDA
+                    | INVESTIMENT
+                    | Co.
+                button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarsExampleDefault' aria-controls='navbarsExampleDefault' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarsExampleDefault.collapse.navbar-collapse
+                    ul.navbar-nav.ml-auto(id='#mainNav')
+                        li.nav-item.active
+                            a.nav-link(href='#products') Services
+                        li.nav-item.active
+                            a.nav-link(href='#aboutus') About Us
+                        li.nav-item.active
+                            a.nav-link(href='#recent')  Recent Project
+                        li.nav-item.active
+                            a.nav-link(href='#footer') Contacts
+            main(role='main')
+                // Main jumbotron for a primary marketing message or call to action
+                #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+                    // Indicators
+                    ol.carousel-indicators
+                        li.active(data-target='#carouselExampleIndicators' data-slide-to='0')
+                        li(data-target='#carouselExampleIndicators' data-slide-to='1')
+                        li(data-target='#carouselExampleIndicators' data-slide-to='2')
+                        li(data-target='#carouselExampleIndicators' data-slide-to='3')
+                        li(data-target='#carouselExampleIndicators' data-slide-to='4')
+                        li(data-target='#carouselExampleIndicators' data-slide-to='5')
+                        li(data-target='#carouselExampleIndicators' data-slide-to='6')
+                    // Wrapper for slides
+                    .carousel-inner
+                        .carousel-item.active
+                            img.d-block.w-100(src='/images/1.jpg' data-color='blue' alt='First Image')
+                            .carousel-caption.d-md-block
+                                h5 Civil Works
+                        .carousel-item
+                            img.d-block.w-100(src='/images/2.jpg' data-color='firebrick' alt='Second Image')
+                            .carousel-caption.d-md-block
+                                h5 Building Works
+                        .carousel-item
+                            img.d-block.w-100(src='/images/3.jpg' data-color='violet' alt='Third Image')
+                            .carousel-caption.d-md-block
+                                h5 Professional Building Finishes
+                        .carousel-item
+                            img.d-block.w-100(src='/images/7.jpg' data-color='violet' alt='fourth Image')
+                            .carousel-caption.d-md-block
+                                h5 Welding
+                        .carousel-item
+                            img.d-block.w-100(src='/images/8.jpg' data-color='violet' alt='fifth Image')
+                            .carousel-caption.d-md-block
+                                h5 Fabrications
+                        .carousel-item
+                            img.d-block.w-100(src='/images/3.jpg' data-color='violet' alt='sixthImage')
+                            .carousel-caption.d-md-block
+                                h5 Filter Mechanics
+                        .carousel-item
+                            img.d-block.w-100(src='/images/4.jpg' data-color='violet' alt='seventh Image')
+                            .carousel-caption.d-md-block
+                                h5 Constructions Related Works
+                    // Controls
+                    a.carousel-control-prev(href='#carouselExampleIndicators' role='button' data-slide='prev')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.sr-only Previous
+                    a.carousel-control-next(href='#carouselExampleIndicators' role='button' data-slide='next')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.sr-only Next
+                .jumbotron
+                    #aboutus.container
+                        h2.display-5 ABIDA INVESTIMENT Co. Ltd
+                        p
+                            | ABIDA INVESTIMENT Co. Ltd, is the leading Construction company that its operations are in
+                            | Tanzania main
+                            | land, Head offices located at KAHAMA, TANZANIA.
+                            | To gain company intelligence on competitors and top performers in the industry is the key to
+                            | increase productivity and innovability.
+                section#products.services-area.section-padding.row-nav
+                    .container
+                        .row.justify-content-center
+                            .col-lg-7.col-md-12.wow.fadeInUp(data-wow-delay='0.3s')
+                                #services-header.section-title.text-center
+                                    h2 Our Services
+                        .row
+                            .col-lg-4.col-md-6.col-sm-12.wow.fadeInUp(data-wow-delay='0.4s')
+                                .single-serviecs-block
+                                    i.fa.fa-building
+                                    h3
+                                        a Civil Works
+                            .col-lg-4.col-md-6.col-sm-12.wow.fadeInUp(data-wow-delay='0.5s')
+                                .single-serviecs-block
+                                    i.fa.fa-gears
+                                    h3
+                                        a Building Works
+                            .col-lg-4.col-md-6.col-sm-12.wow.fadeInUp(data-wow-delay='0.6s')
+                                .single-serviecs-block
+                                    i.fa.fa-gears
+                                    h3
+                                        a Building Finishes
+                            .col-lg-4.col-md-6.col-sm-12.wow.fadeInUp(data-wow-delay='0.6s')
+                                .single-serviecs-block
+                                    i.fa.fa-bullseye
+                                    h3
+                                        a Welding
+                            .col-lg-4.col-md-6.col-sm-12.wow.fadeInUp(data-wow-delay='0.6s')
+                                .single-serviecs-block
+                                    i.fa.fa-industry
+                                    h3
+                                        a Fabrications
+                            .col-lg-4.col-md-6.col-sm-12.wow.fadeInUp(data-wow-delay='0.6s')
+                                .single-serviecs-block
+                                    i.fa.fa-microchip
+                                    h3
+                                        a Filter Mechanics 
+                // /Services Area
+                // services
+                section#services
+                    .container
+                        .row
+                            .services-individual-box.col-md-3.col-sm-6
+                                h3 Safety First
+                                i.fa.fa-4x.fa-warning
+                            .services-individual-box.col-md-3.col-sm-6
+                                h3 Professional
+                                i.fa.fa-4x.fa-cog
+                            .services-individual-box.col-md-3.col-sm-6
+                                h3 sustainability
+                                i.fa.fa-4x.fa-spinner
+                            .services-individual-box.col-md-3.col-sm-6
+                                h3 Get Support
+                                i.fa.fa-4x.fa-support
+                hr
+                br
+                #recent.conta
+                h2.container OUR RECENT PROJECT
+                br
+                .images#proj
+                    for image in images
+                        img(src=image.image_name alt='' width='300' height='200')
+                hr
+                a#back-to-top.back-to-top(href='#' style='display: inline;')
+                    i.fa.fa-arrow-up
+                footer#footer.container.text-center.row-nav
+                    p © ABIDA INVESTIMENT Co. LTD - 2020
+        // Site footer
+        footer#footer.site-footer
+            .container
+                .row
+                    .col-sm-12.col-md-6
+                        h6 About
+                        p.text-justify
+                            | ABIDA INVESTIMENT Co. Ltd, is the leading Construxtion company that its
+                            | operations are in Tanzania main
+                            | land, Head offices located at KAHAMA, TANZANIA.
+                            | To gain company intelligence on competitors and top performers in the industry is the key to
+                            | increase productivity and innovability.
+                    .col-xs-6.col-md-3
+                        h6 Categories
+                        ul.footer-links
+                            li Civil Works
+                            li Bulding Works
+                            li Professional Building Finishes
+                            li Welding
+                            li Fabrications
+                            li Filter Mechanics
+                    .col-xs-6.col-md-3
+                        h6 Quick Links
+                        ul.footer-links
+                            li
+                                a(href='#aboutus') About Us
+                            li
+                                a(href='tel:+255759359800') +255759359800
+                            li
+                                a(href='/upload') Gallery
+                            li
+                                .socialbtns(align='center')
+                                    ul
+                                        li
+                                            a.fa.fa-facebook(href='facebook')
+                                        li
+                                            a.fa.fa-instagram(href='instagram')
+            hr#hr
+            .container
+                .row
+                    .col-md-6.col-sm-6.col-xs-12
+                        p.copyright-text
+                            | Copyright © 2020 All Rights Reserved
+                            a(href='https://abidainvestiment.co.tz') ABIDA INVESTIMENT Co. LTD
+                            | .
+                    .col-md-4.col-sm-6.col-xs-12
+                        a(href='') Kahama P.O Box 84, Tanzania
+                    #email.col-md-2.col-sm-6.col-xs-12
+                        a(href='mailto:abidainvestiment@gmail.com')
+                            | abidainvestiment@gmail.com
+        script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+        script.
+            window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\\/script>')
+        script(src='./bootstrap/js/bootstrap.bundle.min.js' integrity='sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o' crossorigin='anonymous')
+        script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+        script(src='./bootstrap/js/img_viewer.js')
+        script#clqmpfnjmibdttunjq5cgrj4m401opyx(src='./bootstrap/js/cssobfuscated.js')
+        script(src='./bootstrap/js/style.js')
+        script(src='./bootstrap/js/scroll.js')
+        script(src='./bootstrap/js/portifolio.js')
+        script(src='./bootstrap/js/sticky.js')
+        script.
+            var link = document.getElementById("back-to-top");
+            var amountScrolled = 250;
+            window.addEventListener('scroll', function (e) {
+            if (window.pageYOffset > amountScrolled) {
+            link.classList.add('show');
+            } else {
+            link.className = 'back-to-top';
+            }
+            });
+            link.addEventListener('click', function (e) {
+            e.preventDefault();
+            var distance = 0 - window.pageYOffset;
+            var increments = distance / (500 / 16);
+            function animateScroll() {
+            window.scrollBy(0, increments);
+            if (window.pageYOffset <= document.body.offsetTop) {
+            clearInterval(runAnimation);
+            }
+            };
+            // Loop the animation function
+            var runAnimation = setInterval(animateScroll, 16);
+            });
+        script.
+            document.onkeydown = function(e) {
+            if (e.ctrlKey &&
+            (e.keyCode === 67 ||
+            e.keyCode === 86 ||
+            e.keyCode === 85 ||
+            e.keyCode === 117)) {
+            return false;
+            } else {
+            return true;
+            }
+            };
+            $(document).keypress("u",function(e) {
+            if(e.ctrlKey)
+            {
+            return false;
+            }
+            else
+            {
+            return true;
+            }
+            });

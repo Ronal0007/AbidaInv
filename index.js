@@ -7,11 +7,15 @@ var express = require('express')
     ,bodyParser = require('body-parser')
     ,helpers = require('./modules/helpers.js')
     ,mysqli = require('./modules/databaseConn.js')
+    ,pug = require('pug')
     ,flash = require('connect-flash');
-
 // create express app
 var app = express();
 app.use(express.static(path.join(__dirname, 'public')));
+
+//set template engine
+app.set('views', './views');
+app.set('view engine', 'pug');
 
 // setup route middlewares
 var csrfProtection = csrf({ cookie: true });
@@ -51,15 +55,25 @@ let storage = multer.diskStorage({
   }
 });
 
-
 //route index
 app.get('/', csrfProtection, function (req, res) {
   // pass the csrfToken to the view
-  res.sendFile(path.join(__dirname + '/views/index.views.html'), { csrfToken: req.csrfToken() });
+  mysqli.connection.query('SELECT * FROM file', function (err, results, fields){
+
+    if(err){
+      throw err
+    }
+    else{
+      
+      res.render('index',{images: results})
+    }
+    
+  })
+
 });
 
 app.get('/upload', csrfProtection, function (req , res){
-  res.sendFile(path.join(__dirname + '/views/upload.views.html'), {
+  res.render(('upload'), {
     csrfToken: req.csrfToken()
   });
 })
@@ -92,10 +106,6 @@ app.post('/uploads', (req, res) => {
         res.redirect('/')
 
   });
-  mysqli.connection.query('SELECT * FROM file', function (err, results, fields){
-    console.log(results)
-  })
-
   });
   
 });
