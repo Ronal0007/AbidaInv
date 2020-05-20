@@ -10,6 +10,7 @@ html(lang='en')
         // Bootstrap core CSS
         link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
         link(href='./bootstrap/css/bootstrap.min.css' rel='stylesheet')
+        link(href='./bootstrap/css/style.css' rel='stylesheet')
         script(data-ad-client='ca-pub-4697597730958440' async='' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
         style.
             .bd-placeholder-img {
@@ -162,9 +163,12 @@ html(lang='en')
                 #recent.conta
                 h2.container OUR RECENT PROJECT
                 br
-                .images#proj
+                .images
                     for image in images
                         img(src=image.image_name alt='' width='300' height='200')
+                #image-viewer
+                    span.close ×
+                    img#full-image.modal-content
                 hr
                 a#back-to-top.back-to-top(href='#' style='display: inline;')
                     i.fa.fa-arrow-up
@@ -199,7 +203,7 @@ html(lang='en')
                             li
                                 a(href='tel:+255759359800') +255759359800
                             li
-                                a(href='/upload') Gallery
+                                a(href='/login') Gallery
                             li
                                 .socialbtns(align='center')
                                     ul
@@ -226,7 +230,7 @@ html(lang='en')
         script(src='./bootstrap/js/bootstrap.bundle.min.js' integrity='sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o' crossorigin='anonymous')
         script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
         script(src='./bootstrap/js/img_viewer.js')
-        script#clqmpfnjmibdttunjq5cgrj4m401opyx(src='./bootstrap/js/cssobfuscated.js')
+        //- script#clqmpfnjmibdttunjq5cgrj4m401opyx(src='./bootstrap/js/cssobfuscated.js')
         script(src='./bootstrap/js/style.js')
         script(src='./bootstrap/js/scroll.js')
         script(src='./bootstrap/js/portifolio.js')
