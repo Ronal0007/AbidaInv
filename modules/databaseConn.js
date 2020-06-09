@@ -5,7 +5,8 @@ var connection = mysqli.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'abidainv'
+    database: 'abidainv',
+    multipleStatements: true
   });
 
     connection.connect((function (err) {

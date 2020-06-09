@@ -83,16 +83,18 @@ let storage = multer.diskStorage({
 app.get('/', csrfProtection, function (req, res) {
 
   // pass the csrfToken to the view
-  mysqli.connection.query('SELECT * FROM file ORDER BY img_id DESC LIMIT 6', function (err, results, fields){
-
+  mysqli.connection.query('SELECT * FROM file ORDER BY img_id DESC LIMIT 6; SELECT COUNT(*) as total FROM file',[1,2], function (err, results, fields){
+    for(var i = 0; i < results[1].length; i++){
+      var counts = results[1][i];
+    }
     if(err){
       throw err
     }
     else{
-      
-      res.render('index',{images: results})
+      res.render('index',{images: results[0], count: counts.total})
     }
-    
+    console.log(results[0])
+    console.log(counts.total)
   })
 });
 
@@ -118,7 +120,6 @@ app.get('/login', csrfProtection, function (req, res) {
 //logout route
 app.get('/logout', csrfProtection, authChecker, function (req, res, next) {
   req.session.loggedin = false;
-  req.flash('danger', 'logout successfully');
   res.redirect('/');
 
 });
@@ -133,10 +134,8 @@ app.post('/auth', function (req, res){
         if (result == true) {
           req.session.loggedin = true;
           req.session.email = email;
-          req.flash('success', 'Welcome ')
           res.redirect('/upload');
         } else {
-          req.flash('warning', 'Username and/ or password are incorrect')
           res.redirect('/login');
         }
       })
@@ -144,7 +143,6 @@ app.post('/auth', function (req, res){
     } 
     else {
 
-      req.flash('warning', 'Details not Found! Please Contact your Admin for registration')
       res.redirect('/login')
     }
   })

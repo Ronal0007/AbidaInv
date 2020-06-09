@@ -6,10 +6,11 @@ html(lang='en')
         meta(name='description' content='')
         title Abida Investiment Co. LTD
         link(rel='canonical' href='https://getbootstrap.com/docs/4.3/examples/jumbotron/')
-        link(rel='shortcut icon' href='./images/wisjane-logo.ico')
+        link(rel='shortcut icon' href='./images/abida.png')
         // Bootstrap core CSS
         link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
         link(href='./bootstrap/css/bootstrap.min.css' rel='stylesheet')
+        link(rel="stylesheet", href="./bootstrap/css/bootstrap.css")
         link(href='./bootstrap/css/style.css' rel='stylesheet')
         script(data-ad-client='ca-pub-4697597730958440' async='' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
         style.
@@ -27,7 +28,7 @@ html(lang='en')
             flex: space-between;
             }
         // Custom styles for this template
-    body(oncontextmenu='return false')
+    body
         .container
             nav#myHeader.navbar.navbar-expand-lg.navbar-light.bg-warning
                 a.navbar-brand(href='#' style='font-family:verdana;font-size: 21px; color: rgb(255, 255, 255)')
@@ -48,46 +49,17 @@ html(lang='en')
                             a.nav-link(href='#footer') Contacts
             main(role='main')
                 // Main jumbotron for a primary marketing message or call to action
-                #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+                .carousel.slide#carouselExampleIndicators(data-ride='carousel')
                     // Indicators
+                    - var n = 0;
                     ol.carousel-indicators
-                        li.active(data-target='#carouselExampleIndicators' data-slide-to='0')
-                        li(data-target='#carouselExampleIndicators' data-slide-to='1')
-                        li(data-target='#carouselExampleIndicators' data-slide-to='2')
-                        li(data-target='#carouselExampleIndicators' data-slide-to='3')
-                        li(data-target='#carouselExampleIndicators' data-slide-to='4')
-                        li(data-target='#carouselExampleIndicators' data-slide-to='5')
-                        li(data-target='#carouselExampleIndicators' data-slide-to='6')
+                        while n < count
+                            li(data-target='#carouselExampleIndicators', data-slide-to = n++)
                     // Wrapper for slides
                     .carousel-inner
-                        .carousel-item.active
-                            img.d-block.w-100(src='/images/1.jpg' data-color='blue' alt='First Image')
-                            .carousel-caption.d-md-block
-                                h5 Civil Works
-                        .carousel-item
-                            img.d-block.w-100(src='/images/2.jpg' data-color='firebrick' alt='Second Image')
-                            .carousel-caption.d-md-block
-                                h5 Building Works
-                        .carousel-item
-                            img.d-block.w-100(src='/images/3.jpg' data-color='violet' alt='Third Image')
-                            .carousel-caption.d-md-block
-                                h5 Professional Building Finishes
-                        .carousel-item
-                            img.d-block.w-100(src='/images/7.jpg' data-color='violet' alt='fourth Image')
-                            .carousel-caption.d-md-block
-                                h5 Welding
-                        .carousel-item
-                            img.d-block.w-100(src='/images/8.jpg' data-color='violet' alt='fifth Image')
-                            .carousel-caption.d-md-block
-                                h5 Fabrications
-                        .carousel-item
-                            img.d-block.w-100(src='/images/3.jpg' data-color='violet' alt='sixthImage')
-                            .carousel-caption.d-md-block
-                                h5 Filter Mechanics
-                        .carousel-item
-                            img.d-block.w-100(src='/images/4.jpg' data-color='violet' alt='seventh Image')
-                            .carousel-caption.d-md-block
-                                h5 Constructions Related Works
+                        for imgs in images
+                            .carousel-item
+                                img.d-block.w-100(src=imgs.image_name data-color='blue')
                     // Controls
                     a.carousel-control-prev(href='#carouselExampleIndicators' role='button' data-slide='prev')
                         span.carousel-control-prev-icon(aria-hidden='true')
@@ -231,6 +203,7 @@ html(lang='en')
         script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
         script(src='./bootstrap/js/img_viewer.js')
         //- script#clqmpfnjmibdttunjq5cgrj4m401opyx(src='./bootstrap/js/cssobfuscated.js')
+        script(src="./bootstrap/js/bootstrap.js")
         script(src='./bootstrap/js/style.js')
         script(src='./bootstrap/js/scroll.js')
         script(src='./bootstrap/js/portifolio.js')
